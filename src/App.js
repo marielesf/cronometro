@@ -11,16 +11,29 @@ export default class Batata extends React.Component {
     });
   };
 
-  Add = () => {
-    this.setState({
-      number: this.state.number + 1
-    });
+  //   const intervalo =  () => {setInterval(() => {
+  //     this.setState({
+  //       number: this.state.number + 1
+  //     });
+  //   }, 500);
+  // };
+  // }
+  //let intervalo = 0;
 
-    setInterval(() => {
+  Add = () => {
+    // this.setState({
+    //   number: this.state.number + 1
+    // });
+
+    var intervalo = setInterval(() => {
       this.setState({
         number: this.state.number + 1
       });
     }, 500);
+  };
+
+  parouRubinho = () => {
+    //clearInterval(intervalo);
   };
 
   componentDidMount() {
@@ -33,6 +46,7 @@ export default class Batata extends React.Component {
         <h2> {this.state.number} </h2>
         <button onClick={this.Add}> + </button>
         <button onClick={this.Resetar}> Resetar </button>
+        <button onClick={this.parouRubinho}> STOP </button>
       </>
     );
   }
