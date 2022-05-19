@@ -11,29 +11,17 @@ export default class Batata extends React.Component {
     });
   };
 
-  //   const intervalo =  () => {setInterval(() => {
-  //     this.setState({
-  //       number: this.state.number + 1
-  //     });
-  //   }, 500);
-  // };
-  // }
-  //let intervalo = 0;
-
   Add = () => {
-    // this.setState({
-    //   number: this.state.number + 1
-    // });
-
-    var intervalo = setInterval(() => {
+    const intervalo = setInterval(() => {
       this.setState({
-        number: this.state.number + 1
+        number:
+          this.state.number < 50 ? this.state.number + 1 : this.state.number
       });
     }, 500);
-  };
 
-  parouRubinho = () => {
-    //clearInterval(intervalo);
+    this.parouRubinho = () => {
+      clearInterval(intervalo);
+    };
   };
 
   componentDidMount() {
