@@ -1,7 +1,7 @@
 # cronometro
 Created with CodeSandbox
 
-##CRONÔMETRO
+##CRONÔMETRO  
 01 - Crie um projeto em REACT  
 02 - Crie um componente de classe   
 03 - Execute e estilize um cronômetro com os conhecimentos adquiridos em aula.  
